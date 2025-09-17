@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payoo Mfs</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+
+    <style>
+       
+        .bal-font{
+            font-size: 1.5rem;
+            font-weight: 900;
+        }
+        
+        .bal-text{
+            font-size: 0.875rem;
+            font-weight: 400;
+        }
+
+        .btn-logout{
+            border: 2px solid black;
+            border-radius: 10%;
+            background-color: pink;
+        }
+
+        .wel-payoo{
+            font-size: 1.7rem;
+            font-weight: bold; 
+            color: rgba(8, 8, 8, 1);
+            margin-bottom: 1rem;
+        }
+
+        .box{
+
+            border:2px solid rgba(8, 8, 8, 0.1) ;
+            padding: 10px 20px;
+            border-radius: 12px;
+            width: 130px;
+            height:100px ;
+
+        }
+
+        .add-money-font{
+            font-weight:400;
+            font-size: 0.875rem;
+        }
+
+        .add-money-2-font{
+            font-weight: 700;
+            font-size: 1.125rem;
+        }
+
+        .addmoney-btn-style{
+            font-weight: 600;
+            color: white;
+        }
+
+        .hand-pointer {
+            cursor: pointer;
+        }
+
+        #current-balance::before {
+            content: "$";
+        }
+
+        
+
+    </style>
+
+</head>
+<body class="bg-slate-800">
+
+<section class="bg-gray-200 max-w-md min-h-screen mx-auto py-6">
+ 
+    <header>
+
+        <nav class="flex justify-around items-center gap-28">
+
+            <div class="flex items-center gap-2">
+                
+                <img class="w-16" src="assets/Group.png" alt="">
+                
+                <div class="text-black" >
+                    <h1 id="current-balance" class="font-bold bal-font">45000</h1>
+                    <p class="bal-text border rounded p-1">Available Balance</p>
+                </div>
+            
+            </div>
+ 
+            <button id="logout-btn" class="text-black btn-logout p-3 px-4">Log Out</button>
+
+        </nav>
+
+    </header>
+
+    <section class="mt-8 bg-white py-5 mb-8">
+
+            <h1 class="wel-payoo">🔥 Welcome to Payooo!</h1>
+            <p class="text-black text-justify mx-4">Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
+            
+            <div class="grid grid-cols-3 mt-11 mx-4 justify-center items-center gap-4">
+
+                <div class="box flex flex-col justify-center items-center gap-1 hand-pointer">
+                    
+                    <img src="assets/wallet1.png" alt="">
+                    <h3 id="add-money-menu" class="text-black add-money-font">Add money</h3>
+                      
+                </div>
+
+                <div class="box flex flex-col justify-center items-center gap-1 hand-pointer">
+
+                    <img src="assets/send1.png" alt="">
+                    <h3 class="text-black add-money-font">Cashout</h3>
+                 
+                </div>
+
+                <div class="box flex flex-col justify-center items-center gap-1 hand-pointer">
+
+                    <img src="assets/money1.png" alt="">
+                    <h3 class="text-black add-money-font whitespace-nowrap">Transfer Money</h3>
+                 
+                </div>
+
+                <div class="box flex flex-col justify-center items-center gap-1 hand-pointer">
+
+                    <img src="assets/bonus1.png" alt="">
+                    <h3 class="text-black add-money-font">Get Bonus</h3>
+                 
+                </div>
+
+                <div class="box flex flex-col justify-center items-center gap-1 hand-pointer">
+                    <img src="assets/purse1.png" alt="">
+                    <h3 class="text-black add-money-font">Pay Bill</h3>
+                 
+                </div>
+
+                <div class="box flex flex-col justify-center items-center gap-1 hand-pointer">
+
+                    <img src="assets/transaction1.png" alt="">
+                    <h3 class="text-black add-money-font">Transactions</h3>
+                 
+                </div>
+
+            </div> 
+
+    </section>
+                       <!-- Add Money Section -->
+             
+    <section id="add-money-form" class="hidden">
+
+        <h2 class="add-money-2-font text-black ml-6">Add Money</h2>
+
+        
+        <div class="hero-content flex-col lg:flex-row-reverse">
+                    
+                    <!-- <div class="card w-full max-w-sm bg-gray-100"> -->
+                      
+                <form class="card-body w-full bg-white">
+                        
+                     <fieldset class="fieldset">
+                         
+                        <legend>Select a Bank</legend>
+                          
+                        <select name="" id="input-bank" class="select select-bordered w-full bg-gray-200 text-black" required>
+                             
+                            <option disabled selected>Select Bank</option>
+                            <option value="Bkash">Bkash</option>
+                            <option value="Nagad">Nagad</option>
+                            <option value="Rocket">Rocket</option> 
+                             `
+                        </select> 
+                        
+                        <label class="label">Bank Account Number</label>
+                        <input type="text" id="input-acc-num" class="input bg-gray-200 text-black w-full" placeholder="Enter 11 digit account number" required/>
+
+                        <label class="label">Amount to Add</label>
+                        <input type="number" id="input-ammount" class="input bg-gray-200 text-black w-full" placeholder="Enter Your Amount" required/>
+                         
+                        <label class="label">PIN</label>
+                        <input type="password" id="input-pin" class="input bg-gray-200 text-black w-full" placeholder="Enter Your PIN" required />
+                         
+                        <div><a class="link link-hover">Forgot password?</a></div>
+                         
+                        <button id="add-money-btn" class="btn addmoney-btn-style btn-neutral mt-4 w-full bg-blue-500">Add Money</button>
+                     
+                     </fieldset>
+                        
+                </form>
+                    
+                    <!-- </div> -->
+            
+            
+        </div>
+
+    </section>
+    
+
+</section>  
+
+<script src="JS/utilizers.js" ></script>
+<script src="JS/home.js"></script>
+    
+</body>
+</html>

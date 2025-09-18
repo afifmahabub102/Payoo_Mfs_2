@@ -18,9 +18,8 @@ document.getElementById('add-money-btn').addEventListener('click',function(event
                                 if( Pin === 1234){
                                         const FinalBalance = CurrentBalance + Ammount ;
                                         document.getElementById('current-balance').innerText = FinalBalance ;
-                                        document.getElementById('add-money-form').reset();
                                         document.getElementById('add-money-form').classList.add('hidden') ;
-                                         
+                                        document.getElementById('add-money-form-reset').reset(); 
                                 }
                                 else{
                                         alert('Wrong Pin.Try again');

@@ -17,7 +17,8 @@ document.getElementById('add-money-btn').addEventListener('click',function(event
 
                                 if( Pin === 1234){
                                         const FinalBalance = CurrentBalance + Ammount ;
-                                        document.getElementById('current-balance').innerText = FinalBalance ; 
+                                        document.getElementById('current-balance').innerText = FinalBalance ;
+                                        document.getElementById('add-money-form').classList.add('hidden') ; 
                                 }
                                 else{
                                         alert('Wrong Pin.Try again');
@@ -39,11 +40,7 @@ document.getElementById('add-money-btn').addEventListener('click',function(event
         }
 })
 
-// document.getElementById("input-acc-num").addEventListener("input", function () {
-//     if (this.value.length > 11) {
-//         this.value = this.value.slice(0, 11); 
-//     }
-// });
+
 
 document.getElementById("input-acc-num").addEventListener("input", function () {
     let digitsOnly = "";

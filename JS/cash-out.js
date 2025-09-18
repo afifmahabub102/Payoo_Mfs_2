@@ -14,7 +14,8 @@ document.getElementById('cash-out-btn').addEventListener('click',function(event)
 
                                 if( Pin_Cash_Out === 1234){
                                         const FinalBalance_Cash_Out = CurrentBalance_Cash_Out - CashOutAmount ;
-                                        document.getElementById('current-balance').innerText = FinalBalance_Cash_Out ; 
+                                        document.getElementById('current-balance').innerText = FinalBalance_Cash_Out ;
+                                        document.getElementById('cash-out-form').classList.add('hidden') ; 
                                 }
                                 else{
                                         alert('Wrong Pin.Try again');

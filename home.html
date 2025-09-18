@@ -102,14 +102,14 @@
             
             <div class="grid grid-cols-3 mt-11 mx-4 justify-center items-center gap-4">
 
-                <div class="box flex flex-col justify-center items-center gap-1 hand-pointer">
+                <div id="add-money-menu" class="box flex flex-col justify-center items-center gap-1 hand-pointer">
                     
                     <img src="assets/wallet1.png" alt="">
-                    <h3 id="add-money-menu" class="text-black add-money-font">Add money</h3>
+                    <h3 class="text-black add-money-font">Add money</h3>
                       
                 </div>
 
-                <div class="box flex flex-col justify-center items-center gap-1 hand-pointer">
+                <div id="cash-out-menu" class="box flex flex-col justify-center items-center gap-1 hand-pointer">
 
                     <img src="assets/send1.png" alt="">
                     <h3 class="text-black add-money-font">Cashout</h3>
@@ -169,7 +169,7 @@
                             <option value="Bkash">Bkash</option>
                             <option value="Nagad">Nagad</option>
                             <option value="Rocket">Rocket</option> 
-                             `
+                             
                         </select> 
                         
                         <label class="label">Bank Account Number</label>
@@ -195,6 +195,45 @@
         </div>
 
     </section>
+
+                                <!-- Cash-Out-form -->
+
+    
+    <section id="cash-out-form" class="hidden">
+        
+        <h2 class="add-money-2-font text-black ml-6">Cash Out</h2>
+
+        <div class="hero-content flex-col lg:flex-row-reverse">
+                    
+                    <!-- <div class="card w-full max-w-sm bg-gray-100"> -->
+                      
+                <form class="card-body w-full bg-white">
+                        
+                     <fieldset class="fieldset">
+                         
+                        <label class="label">Agent Number</label>
+                        <input type="text" id="input-agent-num" class="input bg-gray-200 text-black w-full" placeholder="Enter 11 digit account number" required/>
+
+                        <label class="label">Amount</label>
+                        <input type="number" id="input-cashout-ammount" class="input bg-gray-200 text-black w-full" placeholder="Enter amount to withdraw" required/>
+                         
+                        <label class="label">PIN</label>
+                        <input type="password" id="input-pin-cashout" class="input bg-gray-200 text-black w-full" placeholder="Enter Your PIN" required />
+                         
+                        <div><a class="link link-hover">Forgot password?</a></div>
+                         
+                        <button id="cash-out-btn" class="btn addmoney-btn-style btn-neutral mt-4 w-full bg-blue-500">Cash Out</button>
+                     
+                     </fieldset>
+                        
+                </form>
+                    
+                    <!-- </div> -->
+            
+            
+        </div>
+
+    </section>                            
     
 
 </section>  
@@ -202,6 +241,7 @@
 <script src="JS/utilizers.js" ></script>
 <script src="JS/home.js"></script>
 <script src="JS/add-money.js"></script>
+<script src="JS/cash-out.js"></script>
     
 </body>
 </html>

@@ -33,3 +33,23 @@ document.getElementById('cash-out-btn').addEventListener('click',function(event)
         }
 
 })
+
+
+document.getElementById("input-agent-num").addEventListener("input", function () {
+    let digitsOnly = "";
+
+for (let i = 0; i < this.value.length; i++) {
+        
+        if (!isNaN(this.value[i]) && this.value[i] !== " ") {  
+
+            digitsOnly += this.value[i];
+        }
+    }
+
+
+    if (digitsOnly.length > 11) {
+        digitsOnly = digitsOnly.slice(0, 11);
+    }
+
+       this.value = digitsOnly;
+});

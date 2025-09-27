@@ -74,6 +74,10 @@
             content: "$";
         }
 
+        .black{
+            color: black;
+        }
+
     @media screen and ( max-width:576px ) {
   
         .box{
@@ -148,14 +152,14 @@
                  
                 </div>
 
-                <div class="box flex flex-col justify-center items-center gap-1 hand-pointer">
+                <div id="transfer-money-menu" class="box flex flex-col justify-center items-center gap-1 hand-pointer">
 
                     <img src="assets/money1.png" alt="">
                     <h3 class="text-black add-money-font whitespace-nowrap">Transfer Money</h3>
                  
                 </div>
 
-                <div class="box flex flex-col justify-center items-center gap-1 hand-pointer">
+                <div id="bonus-menu" class="box flex flex-col justify-center items-center gap-1 hand-pointer">
 
                     <img src="assets/bonus1.png" alt="">
                     <h3 class="text-black add-money-font">Get Bonus</h3>
@@ -187,13 +191,12 @@
         
         <div class="hero-content flex-col lg:flex-row-reverse">
                     
-                    <!-- <div class="card w-full max-w-sm bg-gray-100"> -->
-                      
+                                     
                 <form id="add-money-form-reset" class="card-body w-full bg-white">
                         
                      <fieldset class="fieldset">
                          
-                        <legend>Select a Bank</legend>
+                        <legend class="black">Select a Bank</legend>
                           
                         <select name="" id="input-bank" class="select select-bordered w-full bg-gray-200 text-black" required>
                              
@@ -204,13 +207,13 @@
                              
                         </select> 
                         
-                        <label class="label">Bank Account Number</label>
+                        <label class="label black">Bank Account Number</label>
                         <input type="text" id="input-acc-num" class="input bg-gray-200 text-black w-full" placeholder="Enter 11 digit account number" required/>
 
-                        <label class="label">Amount to Add</label>
+                        <label class="label black">Amount to Add</label>
                         <input type="number" id="input-ammount" class="input bg-gray-200 text-black w-full" placeholder="Enter Your Amount" required/>
                          
-                        <label class="label">PIN</label>
+                        <label class="label black">PIN</label>
                         <input type="password" id="input-pin" class="input bg-gray-200 text-black w-full" placeholder="Enter Your PIN" required />
                          
                         <div><a class="link link-hover">Forgot password?</a></div>
@@ -221,9 +224,6 @@
                         
                 </form>
                     
-                    <!-- </div> -->
-            
-            
         </div>
 
     </section>
@@ -237,19 +237,17 @@
 
         <div class="hero-content flex-col lg:flex-row-reverse">
                     
-                    <!-- <div class="card w-full max-w-sm bg-gray-100"> -->
-                      
                 <form id="cash-out-form-reset" class="card-body w-full bg-white">
                         
                      <fieldset class="fieldset">
                          
-                        <label class="label">Agent Number</label>
+                        <label class="label black">Agent Number</label>
                         <input type="text" id="input-agent-num" class="input bg-gray-200 text-black w-full" placeholder="Enter 11 digit account number" required/>
 
-                        <label class="label">Amount</label>
+                        <label class="label black">Amount</label>
                         <input type="number" id="input-cashout-ammount" class="input bg-gray-200 text-black w-full" placeholder="Enter amount to withdraw" required/>
                          
-                        <label class="label">PIN</label>
+                        <label class="label black">PIN</label>
                         <input type="password" id="input-pin-cashout" class="input bg-gray-200 text-black w-full" placeholder="Enter Your PIN" required />
                          
                         <div><a class="link link-hover">Forgot password?</a></div>
@@ -260,13 +258,68 @@
                         
                 </form>
                     
-                    <!-- </div> -->
-            
-            
         </div>
 
     </section>                            
     
+                              <!-- Transfer Money Form -->
+
+    <section id="transfer-money-form" class="hidden">
+        
+        <h2 class="add-money-2-font text-black ml-6">Transfer Money</h2>
+
+        <div class="hero-content flex-col lg:flex-row-reverse">
+                    
+                <form id="transfer-money-form-reset" class="card-body w-full bg-white">
+                        
+                     <fieldset class="fieldset">
+                         
+                        <label class="label black">User Account Number</label>
+                        <input type="text" id="input-user-num" class="input bg-gray-200 text-black w-full" placeholder="Enter 11 digit account number" required/>
+
+                        <label class="label black">Amount</label>
+                        <input type="number" id="input-transfer-amount" class="input bg-gray-200 text-black w-full" placeholder="Enter amount to transfer" required/>
+                         
+                        <label class="label black">PIN</label>
+                        <input type="password" id="input-pin-transfer" class="input bg-gray-200 text-black w-full" placeholder="Enter Your PIN" required />
+                         
+                        <div><a class="link link-hover">Forgot password?</a></div>
+                         
+                        <button id="transfer-money-btn" class="btn addmoney-btn-style btn-neutral mt-4 w-full bg-blue-500">Transfer Money</button>
+                     
+                     </fieldset>
+                        
+                </form>
+                    
+        </div>
+ 
+    </section>      
+    
+                                   <!-- Bonus -->
+ 
+    <section id="bonus-form" class="hidden">
+        
+        <h2 class="add-money-2-font text-black ml-6">Get Bonus</h2>
+
+        <div class="hero-content flex-col lg:flex-row-reverse">
+                    
+                <form id="bonus-form-reset" class="card-body w-full bg-white">
+                        
+                     <fieldset class="fieldset">
+                         
+                        <label class="label black">Enter Bonus Coupon</label>
+                        <input type="password" id="bonus-coupon" class="input bg-gray-200 text-black w-full" placeholder="Enter your coupon" required />
+                        
+                        <button id="bonus-btn" class="btn addmoney-btn-style btn-neutral mt-4 w-full bg-blue-500">Get Bonus</button>
+                     
+                     </fieldset>
+                        
+                </form>
+                    
+        </div>
+
+    </section>                                
+
 
 </section>  
 
@@ -274,6 +327,8 @@
 <script src="JS/home.js"></script>
 <script src="JS/add-money.js"></script>
 <script src="JS/cash-out.js"></script>
+<script src="JS/transfer-money.js"></script>
+<script src="JS/bonus.js"></script>
     
 </body>
 </html>

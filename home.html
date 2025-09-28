@@ -166,7 +166,7 @@
                  
                 </div>
 
-                <div class="box flex flex-col justify-center items-center gap-1 hand-pointer">
+                <div id="pay-bill-menu" class="box flex flex-col justify-center items-center gap-1 hand-pointer">
                     <img src="assets/purse1.png" alt="">
                     <h3 class="text-black add-money-font">Pay Bill</h3>
                  
@@ -194,7 +194,7 @@
                                      
                 <form id="add-money-form-reset" class="card-body w-full bg-white">
                         
-                     <fieldset class="fieldset">
+                    <fieldset class="fieldset">
                          
                         <legend class="black">Select a Bank</legend>
                           
@@ -220,7 +220,7 @@
                          
                         <button id="add-money-btn" class="btn addmoney-btn-style btn-neutral mt-4 w-full bg-blue-500">Add Money</button>
                      
-                     </fieldset>
+                    </fieldset>
                         
                 </form>
                     
@@ -239,7 +239,7 @@
                     
                 <form id="cash-out-form-reset" class="card-body w-full bg-white">
                         
-                     <fieldset class="fieldset">
+                    <fieldset class="fieldset">
                          
                         <label class="label black">Agent Number</label>
                         <input type="text" id="input-agent-num" class="input bg-gray-200 text-black w-full" placeholder="Enter 11 digit account number" required/>
@@ -254,7 +254,7 @@
                          
                         <button id="cash-out-btn" class="btn addmoney-btn-style btn-neutral mt-4 w-full bg-blue-500">Cash Out</button>
                      
-                     </fieldset>
+                    </fieldset>
                         
                 </form>
                     
@@ -272,7 +272,7 @@
                     
                 <form id="transfer-money-form-reset" class="card-body w-full bg-white">
                         
-                     <fieldset class="fieldset">
+                    <fieldset class="fieldset">
                          
                         <label class="label black">User Account Number</label>
                         <input type="text" id="input-user-num" class="input bg-gray-200 text-black w-full" placeholder="Enter 11 digit account number" required/>
@@ -287,7 +287,7 @@
                          
                         <button id="transfer-money-btn" class="btn addmoney-btn-style btn-neutral mt-4 w-full bg-blue-500">Transfer Money</button>
                      
-                     </fieldset>
+                    </fieldset>
                         
                 </form>
                     
@@ -305,20 +305,62 @@
                     
                 <form id="bonus-form-reset" class="card-body w-full bg-white">
                         
-                     <fieldset class="fieldset">
+                    <fieldset class="fieldset">
                          
                         <label class="label black">Enter Bonus Coupon</label>
                         <input type="password" id="bonus-coupon" class="input bg-gray-200 text-black w-full" placeholder="Enter your coupon" required />
                         
                         <button id="bonus-btn" class="btn addmoney-btn-style btn-neutral mt-4 w-full bg-blue-500">Get Bonus</button>
                      
-                     </fieldset>
+                    </fieldset>
                         
                 </form>
                     
         </div>
 
-    </section>                                
+    </section>  
+    
+                                 <!-- pay-bill -->
+
+    <section id="pay-bill-form" class="hidden">
+        
+        <h2 class="add-money-2-font text-black ml-6">Pay Bill</h2>
+
+        <div class="hero-content flex-col lg:flex-row-reverse">
+                    
+                <form id="pay-bill-form-reset" class="card-body w-full bg-white">
+                        
+                    <fieldset class="fieldset">
+
+                        <legend class="black">Select to Pay</legend>
+                          
+                        <select name="" id="input-bank-biller" class="select select-bordered w-full bg-gray-200 text-black" required>
+                             
+                            <option disabled selected>Select Bank</option>
+                            <option value="Bkash">Bkash</option>
+                            <option value="Nagad">Nagad</option>
+                            <option value="Rocket">Rocket</option> 
+                             
+                        </select>
+
+                        <label class="label black">Biller Account Number</label>
+                        <input type="text" id="input-biller-acc-num" class="input bg-gray-200 text-black w-full" placeholder="Enter Account Number" required/>
+
+                        <label class="label black">Amount to Pay</label>
+                        <input type="number" id="input-biller-ammount" class="input bg-gray-200 text-black w-full" placeholder="Enter Your Amount" required/>
+                         
+                        <label class="label black">PIN</label>
+                        <input type="password" id="input-biller-pin" class="input bg-gray-200 text-black w-full" placeholder="Enter Your PIN" required />
+                         
+                        <button id="pay-bill-btn" class="btn addmoney-btn-style btn-neutral mt-4 w-full bg-blue-500">Pay Now</button>
+                     
+                    </fieldset>
+                        
+                </form>
+                    
+        </div>
+
+    </section>                             
 
 
 </section>  
@@ -329,6 +371,7 @@
 <script src="JS/cash-out.js"></script>
 <script src="JS/transfer-money.js"></script>
 <script src="JS/bonus.js"></script>
+<script src="JS/pay-bill.js"></script>
     
 </body>
 </html>

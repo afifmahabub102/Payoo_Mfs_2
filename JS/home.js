@@ -31,3 +31,11 @@ document.getElementById('bonus-menu').addEventListener('click',function(){
         document.getElementById('cash-out-form').classList.add('hidden') ;
         document.getElementById('transfer-money-form').classList.add('hidden') ;
 })
+
+document.getElementById('pay-bill-menu').addEventListener('click',function(){
+        document.getElementById('pay-bill-form').classList.remove('hidden') ;
+        document.getElementById('add-money-form').classList.add('hidden') ;
+        document.getElementById('cash-out-form').classList.add('hidden') ;
+        document.getElementById('transfer-money-form').classList.add('hidden') ;
+        document.getElementById('bonus-form').classList.add('hidden') ; 
+}) 
